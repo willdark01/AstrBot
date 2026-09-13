@@ -7,7 +7,7 @@ from pathlib import Path
 
 import runtime_bootstrap
 
-import os, glob
+import os, glob 
 # 强制清理构建期生成的占位数据库，触发重新生成初始密码
 for db_path in glob.glob("data/**/*.db", recursive=True) + glob.glob("/app/data/**/*.db", recursive=True):
     if "kb.db" not in db_path:
