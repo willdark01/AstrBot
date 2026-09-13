@@ -239,5 +239,6 @@ _Companionship and capability should never be at odds. What we aim to create is 
 
 _私は、高性能ですから!_
 
+
 <img src="https://files.astrbot.app/watashiwa-koseino-desukara.gif" width="100"/>
 </div>
