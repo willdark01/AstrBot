@@ -7,21 +7,6 @@ from pathlib import Path
 
 import runtime_bootstrap
 
-from astrbot.core.main import main
-
-if __name__ == "__main__":
-    # 启动前尝试自动将管理后台密码重置为 12345678
-    for cmd in ["password", "reset-password"]:
-        try:
-            sys.argv = ["main.py", cmd, "12345678"]
-            main()
-        except (SystemExit, Exception):
-            pass
-
-    # 恢复参数并正常启动 AstrBot 服务
-    sys.argv = ["main.py"]
-    main()
-
 runtime_bootstrap.initialize_runtime_bootstrap()
 
 DASHBOARD_RESET_PASSWORD_ENV = "ASTRBOT_RESET_DASHBOARD_PASSWORD"
